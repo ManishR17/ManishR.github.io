@@ -7,31 +7,31 @@ excerpt: "Building production-grade ML and Generative AI systems with LLMs, RAG,
 feature_row:
   - title: "JPMorganChase"
     excerpt: "Production-grade LLM and RAG architectures focused on governance, evaluation, and scalable deployment."
-    url: /projects/#enterprise-genai
+    url: /projects/JP_Morgan/
     btn_label: "View Experience"
     btn_class: "btn--primary"
 
   - title: "Amnet Digital"
     excerpt: "End-to-end ML systems for classification and recommendation (2019–2022)."
-    url: /projects/#applied-ml
+    url: /projects/Amnet_Digital/
     btn_label: "View Experience"
     btn_class: "btn--primary"
     
   - title: "EliteContent – Generative AI Platform"
     excerpt: "Full-stack GenAI platform with RAG pipelines, MCP-based context control, and multi-stage evaluation."
-    url: /projects/#elitecontent
+    url: /projects/elitecontent/
     btn_label: "View Project"
     btn_class: "btn--primary"
 
   - title: "Intelligent Cricket Batting Analysis System"
     excerpt: "Computer vision system delivering real-time biomechanical analysis and adaptive coaching feedback."
-    url: /projects/#cricket
+    url: /projects/cricket/
     btn_label: "View Project"
     btn_class: "btn--primary"
 
   - title: "LLM Evaluation & Safety"
     excerpt: "Evaluation pipelines, feedback loops, and alignment techniques for improving LLM reliability."
-    url: /projects/#evaluation
+    url: /projects/evaluation
     btn_label: "View Project"
     btn_class: "btn--primary"
 ---
