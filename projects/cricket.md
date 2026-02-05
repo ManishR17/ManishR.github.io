@@ -172,8 +172,5 @@ This transforms raw vision into **context-aware coaching intelligence**.
 - Real-time perception + reasoning pipeline
 - Explainable AI applied to skill acquisition
 
-### Portfolio Value
-- Demonstrates **Cognitive AI, Computer Vision, CNNs, and Real-Time Systems**
-- Strong contrast to enterprise GenAI / LLM projects
-- Shows ability to build **human-centered, intelligent systems**
+
 
