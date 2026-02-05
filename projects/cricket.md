@@ -92,7 +92,7 @@ This transforms raw vision into **context-aware coaching intelligence**.
 
 ### Training Data – Biomechanical Reasoning Features (Set 2)
 
-![Training Data](/assets/TrainDataImage2.png)
+![Training Data1](/assets/Traindataimage2.png)
 
 
 - Joint angles (knees, hips, shoulders, elbows, spine)
@@ -150,7 +150,7 @@ This transforms raw vision into **context-aware coaching intelligence**.
 ## Results & Output
 
 
-![Training Data](/assets/outputissues.png)
+![result](/assets/outputIssues.png)
 
 
 - Real-time posture correction overlays
@@ -176,3 +176,4 @@ This transforms raw vision into **context-aware coaching intelligence**.
 - Demonstrates **Cognitive AI, Computer Vision, CNNs, and Real-Time Systems**
 - Strong contrast to enterprise GenAI / LLM projects
 - Shows ability to build **human-centered, intelligent systems**
+
