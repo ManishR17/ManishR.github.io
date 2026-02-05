@@ -7,13 +7,13 @@ excerpt: "Building production-grade ML and Generative AI systems with LLMs, RAG,
 experience_row:
   - title: "JPMorgan Chase"
     excerpt: "Enterprise Generative AI systems at scale."
-    url: /experience/JP_Morgan/
+    url: /projects/JP_Morgan/
     btn_label: "View Role"
     btn_class: "btn--primary"
 
   - title: "Amnet Digital"
     excerpt: "Production machine learning systems."
-    url: /experience/Amnet_Digital/
+    url: /projects/Amnet_Digital/
     btn_label: "View Role"
     btn_class: "btn--primary"
 
