@@ -15,17 +15,19 @@ plugins:
 
 author:
   name: Manish Reddy
+  avatar: /assets/profile.jpg   # optional but recommended
   bio: Machine Learning & Generative AI Engineer
+  location: Dallas, TX
   links:
     - label: Email
       icon: fas fa-envelope
-      url: mailto:reachmemanish25@gmail.com
+      url: mailto:manishyr55@gmail.com
     - label: GitHub
       icon: fab fa-github
-      url: https://github.com/your-github
+      url: https://github.com/manishr17
     - label: LinkedIn
       icon: fab fa-linkedin
-      url: https://linkedin.com/in/your-linkedin
+      url: https://www.linkedin.com/in/manishr-ai/
 
 header_pages:
   - index.md
