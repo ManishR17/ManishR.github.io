@@ -54,6 +54,6 @@ I focus on researching and applying state-of-the-art AI techniques where human i
 ## Contact
 
 **Email:** [manishyr55@gmail.com](mailto:manishyr55@gmail.com)  
-**LinkedIn:** [linkedin.com]([https://www.linkedin.com/in/manishr-ai/)  
+**LinkedIn:** [linkedin.com](https://www.linkedin.com/in/manishr-ai/)  
 **GitHub:** [github.com](https://github.com/ManishR17)
 
