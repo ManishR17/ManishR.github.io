@@ -16,7 +16,7 @@ Experience:
     url: /projects/Amnet_Digital/
     btn_label: "View Experience"
     btn_class: "btn--primary"
-  ---
+
   
   Projects:  
   - title: "EliteContent – Generative AI Platform"
