@@ -6,9 +6,9 @@ permalink: /projects/cricket/
 
 ## Overview
 
-This project is a **Cognitive AI–driven virtual batting coach** that combines computer vision, biomechanical reasoning, and real-time feedback loops to improve cricket batting technique.
+This project is a **Cognitive AI–driven virtual batting coach** that combines real-time computer vision, biomechanical reasoning, and closed-loop feedback to improve cricket batting technique.
 
-Unlike traditional video analysis tools, the system does not merely detect motion—it **perceives posture, reasons about biomechanical intent, and delivers corrective feedback in real time**, mimicking how a human coach observes, evaluates, and teaches.
+Rather than relying on opaque deep learning models, the system **perceives human posture, reasons over biomechanical constraints, and delivers explainable corrective feedback in real time**, closely mirroring how an experienced human coach observes and teaches.
 
 ---
 
@@ -16,28 +16,28 @@ Unlike traditional video analysis tools, the system does not merely detect motio
 
 Cricket coaching today faces three core limitations:
 
-- Feedback is largely **subjective** and coach-dependent  
-- Solo practice lacks **real-time corrective guidance**  
-- Existing video tools offer **delayed, non-explainable insights**
+- Feedback is largely **subjective and coach-dependent**
+- Solo practice lacks **real-time corrective guidance**
+- Existing video tools provide **delayed, non-explainable insights**
 
 **Objective:**  
-Build a **real-time Cognitive AI system** that observes batting posture, reasons over biomechanical constraints, and provides **immediate, explainable coaching feedback** using only a standard camera.
+Build a **real-time Cognitive AI system** that observes batting posture, reasons about biomechanical correctness, and provides **immediate, interpretable coaching feedback** using only a standard camera.
 
 ---
 
 ## Cognitive AI Framing
 
-This system follows a **perception–reasoning–action loop**, a core principle of Cognitive AI.
+The system follows a classic **perception–reasoning–action loop**, a foundational Cognitive AI paradigm.
 
 ### Cognitive Loop
 1. **Perception** – Visual sensing via pose estimation
-2. **Understanding** – Biomechanical feature extraction
-3. **Reasoning** – Rule-based + learned posture evaluation
+2. **Understanding** – Biomechanical feature representation
+3. **Reasoning** – Constraint-based posture evaluation
 4. **Decision** – Error detection and correction selection
 5. **Action** – Real-time visual coaching feedback
-6. **Learning** – Adaptive scoring across sessions
+6. **Learning** – Adaptive scoring across practice sessions
 
-This transforms raw vision into **context-aware coaching intelligence**.
+This transforms raw video into **context-aware coaching intelligence**.
 
 ---
 
@@ -64,16 +64,16 @@ This transforms raw vision into **context-aware coaching intelligence**.
 ### Pose-Centric, Explainable AI
 - Used pose estimation instead of end-to-end video classification
 - Enabled **joint-level interpretability**
-- Allowed explicit reasoning over posture mechanics
+- Supported explicit reasoning over batting mechanics
 
-### Hybrid Cognitive Reasoning
-- **Rule-based logic** enforces known cricket biomechanics
-- **ML models** capture player-specific variability
-- Ensures both **consistency and adaptability**
+### Constraint-Based Cognitive Reasoning
+- Rule-based evaluation grounded in cricket biomechanics
+- Player-aware tolerance ranges for natural variation
+- Fully explainable decisions (no black-box inference)
 
 ### Closed-Loop Feedback System
 - Immediate feedback strengthens **motor learning**
-- Reduces error reinforcement during practice
+- Prevents reinforcement of incorrect posture
 - Mimics human coach intervention timing
 
 ---
@@ -82,67 +82,68 @@ This transforms raw vision into **context-aware coaching intelligence**.
 
 ### Training Data – Pose & Motion Perception (Set 1)
 
+
 ![Training Data](/assets/TrainDataImage.png)
 
 
-- Batting videos captured across multiple stances and shots
-- Pose landmarks extracted using real-time pose models
+- Batting videos captured across multiple stances and shot types
+- Pose landmarks extracted using real-time pose estimation
 - Normalized joint coordinates to handle scale and camera variance
 - Annotated biomechanical correctness patterns
 
 ### Training Data – Biomechanical Reasoning Features (Set 2)
 
-![Training Data1](/assets/Traindataimage2.png)
+
+![Training Data](Traindataimage2.png)
 
 
 - Joint angles (knees, hips, shoulders, elbows, spine)
 - Balance and center-of-mass estimation
-- Detection of common technical flaws (head movement, elbow drop)
+- Detection of common technical flaws (head movement, elbow collapse)
 - Feature vectors used for posture scoring and consistency tracking
 
 ---
 
 ## Implementation Details
 
-### Technology Stack (Strengthened)
+### Technology Stack (Accurate & Strong)
 
 **Perception & Computer Vision**
-- OpenCV (real-time frame processing)
-- MediaPipe Pose (high-fidelity landmark extraction)
+- OpenCV (real-time frame acquisition and processing)
+- MediaPipe Pose (high-fidelity skeletal landmark extraction)
 
-**Machine Learning & Cognitive Modeling**
-- CNNs for posture and motion pattern learning
-- Feature-based biomechanical scoring models
+**Biomechanical Modeling**
+- Joint-angle and kinematic feature computation
+- Symmetry, balance, and alignment metrics
 - Temporal smoothing for motion stability
-- Rule-based reasoning engine for explainability
 
-**Cognitive Feedback System**
+**Cognitive Reasoning Engine**
 - Constraint-based posture validation
+- Rule-driven error classification
 - Confidence-aware feedback gating
-- Adaptive correction prioritization
 
 **Backend & Runtime**
 - Python
 - Streamlit for real-time visualization and UI
-- Modular pipeline design for extensibility
+- Modular pipeline architecture for extensibility
 
 **Performance & Optimization**
 - Low-latency inference pipeline
-- Frame skipping and lightweight models
-- Stable real-time performance on consumer hardware
+- Frame skipping for real-time responsiveness
+- Stable performance on consumer-grade hardware
 
 ---
 
 ## Evaluation & Safety
 
 ### Evaluation Strategy
-- Pose detection accuracy across camera angles
+- Pose detection reliability across camera angles
 - End-to-end latency benchmarking
 - Robustness to lighting and background variation
 
 ### Safety & Reliability
 - Confidence thresholds to suppress uncertain feedback
-- Graceful degradation under poor pose visibility
+- Graceful degradation under low pose visibility
 - Visual confidence indicators for user trust
 
 ---
@@ -150,11 +151,11 @@ This transforms raw vision into **context-aware coaching intelligence**.
 ## Results & Output
 
 
-![result](/assets/outputIssues.png)
+![Results](/assets/outputIssues.png)
 
 
 - Real-time posture correction overlays
-- Biomechanical scores displayed live
+- Biomechanical quality scores displayed live
 - Immediate corrective cues during batting motion
 - Improved posture awareness and consistency
 
@@ -169,8 +170,5 @@ This transforms raw vision into **context-aware coaching intelligence**.
 
 ### Technical Impact
 - End-to-end **Cognitive AI system**
-- Real-time perception + reasoning pipeline
-- Explainable AI applied to skill acquisition
-
-
-
+- Real-time perception + symbolic reasoning pipeline
+- Explainable AI applied to human skill acquisition
