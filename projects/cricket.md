@@ -94,7 +94,7 @@ This transforms raw video into **context-aware coaching intelligence**.
 ### Training Data – Biomechanical Reasoning Features (Set 2)
 
 
-![TrainingData1](/assests/Traindataimage2.png)
+![Training Data](/assets/Traindataimage2.png)
 
 
 - Joint angles (knees, hips, shoulders, elbows, spine)
@@ -172,5 +172,6 @@ This transforms raw video into **context-aware coaching intelligence**.
 - End-to-end **Cognitive AI system**
 - Real-time perception + symbolic reasoning pipeline
 - Explainable AI applied to human skill acquisition
+
 
 
