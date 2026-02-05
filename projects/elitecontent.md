@@ -19,7 +19,7 @@ The goal of EliteContent was to build a **production-grade, full-stack Generativ
 
 ## System Architecture
 
-![EliteContent Architecture](/assets/architecture.png)
+![EliteContent Architecture](/assets/Archi.png)
 
 EliteContent follows a **full-stack, service-oriented GenAI architecture** designed to mirror real-world production systems.
 
@@ -134,7 +134,7 @@ By owning both frontend and backend development:
 
 ## Results
 ### Landing Page
-![Landing Output](/assets/Resume_Page.png)
+![Landing Output](/assets/Elite_Landing_Page.png)
 ### Resume Generation
 ![Resume Output](/assets/Resume_Page.png)
 
@@ -155,6 +155,8 @@ By owning both frontend and backend development:
 
 ### Document & Email Generation
 ![Document Output](/assets/Document_Page.png)
+### 
+
 ![Email Output](/assets/Email_Page.png)
 
 - Controlled tone and intent alignment  
@@ -198,3 +200,4 @@ By owning both frontend and backend development:
 - Clear demonstration of **full-stack GenAI ownership**  
 - Strong signal of applied LLM engineering and system design skills  
 - Reference architecture for production-grade Generative AI platforms  
+
