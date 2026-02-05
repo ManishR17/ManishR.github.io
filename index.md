@@ -29,12 +29,6 @@ projects_row:
     url: /projects/cricket/
     btn_label: "View Project"
     btn_class: "btn--primary"
-
-  - title: "LLM Evaluation & Safety"
-    excerpt: "LLM evaluation, reliability, and safety."
-    url: /projects/evaluation/
-    btn_label: "View Project"
-    btn_class: "btn--primary"
 ---
 
 ## Overview
