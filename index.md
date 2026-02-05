@@ -4,21 +4,20 @@ title: "Manish Reddy"
 subtitle: "Machine Learning & Generative AI Engineer"
 excerpt: "Building production-grade ML and Generative AI systems with LLMs, RAG, evaluation, and cloud-native deployment."
 
-Experience:
-  - title: "JPMorganChase"
+experience_row:
+  - title: "JPMorgan Chase"
     excerpt: "Enterprise Generative AI systems at scale."
-    url: /projects/JP_Morgan/
-    btn_label: "View Experience"
+    url: /experience/JP_Morgan/
+    btn_label: "View Role"
     btn_class: "btn--primary"
 
   - title: "Amnet Digital"
     excerpt: "Production machine learning systems."
-    url: /projects/Amnet_Digital/
-    btn_label: "View Experience"
+    url: /experience/Amnet_Digital/
+    btn_label: "View Role"
     btn_class: "btn--primary"
 
-  
-  Projects:  
+projects_row:
   - title: "EliteContent – Generative AI Platform"
     excerpt: "Full-stack Generative AI platform."
     url: /projects/elitecontent/
@@ -33,7 +32,7 @@ Experience:
 
   - title: "LLM Evaluation & Safety"
     excerpt: "LLM evaluation, reliability, and safety."
-    url: /projects/evaluation
+    url: /projects/evaluation/
     btn_label: "View Project"
     btn_class: "btn--primary"
 ---
@@ -46,10 +45,8 @@ My work spans the full ML lifecycle, including data preprocessing, feature engin
 
 I focus on researching and applying state-of-the-art AI techniques where human insight meets machine intelligence, translating ideas into production-ready systems through hands-on experimentation, iteration, and real-world deployment.
 
-## Experience 
-
-{% include Experience %}
+## Experience
+{% include feature_row id="experience_row" %}
 
 ## Projects
-
-{% include Projects %}
+{% include feature_row id="projects_row" %}
