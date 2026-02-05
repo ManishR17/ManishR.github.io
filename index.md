@@ -50,3 +50,10 @@ I focus on researching and applying state-of-the-art AI techniques where human i
 
 ## Projects
 {% include feature_row id="projects_row" %}
+
+## Contact
+
+**Email:** [reachmemanish25@gmail.com](mailto:reachmemanish25@gmail.com)  
+**LinkedIn:** [linkedin.com/in/manishr17](https://linkedin.com/in/manishr17)  
+**GitHub:** [github.com/manishr17](https://github.com/manishr17)
+
