@@ -1,176 +1,165 @@
 ---
-title: Enterprise Generative AI Platform (JPMorgan Chase)
+title: Enterprise RAG Platform (Ericsson)
 layout: single
-permalink: /projects/JP_Morgan/
+permalink: /projects/enterprise-rag-platform/
 ---
 
 ## Problem Statement
 
-Relationship Managers and advisory teams relied on **manual data discovery** across multiple enterprise systems—including CRM platforms, research portals, policy documentation, and client records—to prepare client insights and recommendations.
+Ericsson engineering teams relied on thousands of technical documents including operational runbooks, incident reports, troubleshooting guides, and network procedures.
 
-This process was slow, fragmented, and error-prone, making it difficult to deliver timely, accurate insights during client interactions.
+Engineers spent significant time manually searching documentation, often requiring 10–15 minutes to locate accurate information. Existing keyword search systems failed to capture semantic meaning, resulting in duplicated effort and inconsistent responses.
 
-### Key Challenges
-- 2–3 hours of preparation per client interaction
-- Critical information distributed across disconnected systems
-- Naive LLM usage introduced hallucination and data leakage risks
-- Non-deterministic outputs unsuitable for regulated financial workflows
-- Lack of auditability and governance controls
-- High and unpredictable inference latency
-
-### Core Requirements
-- Secure and compliant AI interactions
-- Deterministic, auditable, and explainable outputs
-- Seamless integration with Java/Spring-based legacy systems
-- Sub-2-second end-to-end latency
-- Horizontal scalability across enterprise teams
+The objective was to build an enterprise-grade Retrieval-Augmented Generation (RAG) platform capable of delivering accurate, citation-grounded answers within seconds while supporting production-scale workloads.
 
 ---
 
 ## System Architecture
 
-The platform follows a **decoupled, service-oriented architecture** designed to integrate safely with legacy enterprise systems while enabling scalable GenAI adoption.
-
 ### Architecture Flow
-1. Legacy Java and Spring-based applications invoke GenAI APIs
-2. API Gateway enforces authentication, authorization, and rate limiting
-3. Context orchestration layer assembles bounded, policy-approved context
-4. Retrieval layer fetches approved enterprise data sources
-5. LLM inference executes on managed cloud infrastructure
-6. Evaluation and monitoring pipelines validate response quality and safety
 
-### Core Components
-- **API Gateway:** Request routing, authentication, authorization, rate limiting
-- **Context Assembly Layer:** RAG + MCP for deterministic prompt construction
-- **Retrieval Layer:** Vector-based semantic search over approved enterprise data
-- **Inference Services:** Stateless, horizontally scalable LLM endpoints
-- **Evaluation Pipeline:** Automated quality checks and safety enforcement
+1. Documents ingested from enterprise repositories
+2. Parsing, cleaning, metadata extraction, and chunk generation
+3. Embeddings generated using OpenAI embedding models
+4. Chunks indexed into ChromaDB and Pinecone
+5. User query embedded
+6. Hybrid retrieval using semantic search and metadata filtering
+7. Cross-encoder reranking
+8. Context optimization
+9. LLM response generation using OpenAI, Claude, or Gemini
+10. Citation generation and confidence scoring
+
+---
+
+## Core Components
+
+### Document Ingestion
+
+- PDF parsing
+- Office document extraction
+- Metadata enrichment
+- Adaptive chunking
+
+### Retrieval Layer
+
+- Vector search
+- Hybrid retrieval
+- Metadata filtering
+- Cross-encoder reranking
+
+### LLM Layer
+
+- OpenAI
+- Claude
+- Gemini
+- Dynamic model routing
+
+### API Layer
+
+- FastAPI
+- REST APIs
+- Authentication
+- Rate limiting
+
+### Infrastructure
+
+- Docker
+- Kubernetes
+- CI/CD
+- AWS
+- GCP
 
 ---
 
 ## Design Decisions
 
-### Retrieval-Augmented Generation (RAG)
-Used to ground LLM responses exclusively in approved enterprise data.
-- Reduces hallucinations
-- Improves factual accuracy
-- Enables traceable and explainable outputs
+### Hybrid Retrieval
 
-### Model Context Protocol (MCP)
-Introduced to enforce deterministic, policy-based context assembly.
-- Strict data boundary enforcement
-- Consistent prompt construction
-- Full auditability of model inputs
+Rather than relying solely on embeddings, hybrid retrieval combined semantic similarity with metadata filters and reranking to improve retrieval precision.
 
-### Stateless Inference Services
-Designed for reliability and elastic scalability.
-- Fault isolation across workloads
-- Predictable latency characteristics
-- Efficient horizontal autoscaling
+### Dynamic Context Selection
 
-### Evaluation-First Architecture
-Quality and safety treated as first-class concerns.
-- Continuous validation of outputs
-- Safer client-facing AI interactions
+Relevant chunks were selected using adaptive context windows, reducing token usage while increasing answer quality.
+
+### Multi-Model Architecture
+
+Model routing selected the most appropriate LLM based on request complexity and cost.
 
 ---
 
-## Implementation Details
+## Tech Stack
 
-### Tech Stack
+### Languages
 
-**Languages**
 - Python
-- Java
 
-**Backend Frameworks**
+### LLM Frameworks
+
+- OpenAI
+- Claude
+- Gemini
+
+### Retrieval
+
+- Pinecone
+- ChromaDB
+- Embeddings
+- Hybrid Search
+
+### APIs
+
 - FastAPI
-- Spring Boot
 
-**LLM Platform**
-- AWS Bedrock
-- Models: Claude, Amazon Titan
-- Prompt orchestration and versioning
+### Cloud
 
-**Retrieval Layer**
-- Managed vector databases
-- Semantic search with metadata filtering (client, region, document type)
-- Enterprise document stores and research repositories
+- AWS
+- GCP
 
-**Infrastructure**
-- AWS (EC2, EKS, S3)
-- Kubernetes orchestration
-- Dockerized microservices
-- Autoscaling node groups
+### Infrastructure
 
-**Observability & Reliability**
-- CloudWatch
-- Prometheus
-- Distributed request tracing
-- Latency and throughput monitoring
-
-**CI/CD**
-- Git-based CI pipelines
-- Automated container builds
-- Rolling, blue-green, and canary deployments
-- Safe prompt and model updates
-
----
-
-## Latency Optimization
-
-### Performance Targets
-- **Baseline p95 latency:** 6–8 seconds
-- **Target p95 latency:** ~2 seconds
-
-### Optimization Techniques
-- Metadata-constrained vector retrieval
-- Prompt size enforcement via MCP
-- Warm LLM endpoints
-- Parallel retrieval and prompt assembly
-- Response caching for frequent queries
-
-### Outcome
-- Stable **sub-2-second p95 latency** under enterprise production load
+- Docker
+- Kubernetes
 
 ---
 
 ## Evaluation & Safety
 
+### Retrieval Evaluation
 
-### Automated Checks
-- Grounding verification
-- Relevance scoring
-- Completeness validation
-- Prompt regression testing
+- Recall
+- Precision
+- MRR
 
-### Human-in-the-Loop Review
-- Enabled for high-risk and client-facing workflows
-- Feedback used for prompt tuning and retrieval optimization
+### LLM Evaluation
 
-### Continuous Monitoring
-- Retrieval quality drift detection
-- Output pattern analysis
-- Alerting on anomalous behavior
+- Faithfulness
+- Groundedness
+- Relevance
+
+### Hallucination Prevention
+
+- Citation Grounding
+- Confidence Scoring
+- Source Attribution
 
 ---
 
 ## Impact
 
-### Productivity Gains
-- Client preparation time reduced from **2–3 hours to 5–10 minutes**
-- ~2 hours saved per client interaction
+### Business Outcomes
 
-### Business Metrics
-- 5–10× increase in Relationship Manager client capacity
-- Consistent **~2s p95 inference latency**
+- Indexed 4,500+ engineering documents
+- Indexed over 250K document chunks
+- Reduced search time from 15 minutes to under 20 seconds
+- Improved retrieval precision by 31%
 
-### Client Experience
-- Faster insights during live conversations
-- More accurate and explainable recommendations
-- Increased client confidence and trust
+### Operational Impact
 
-### Organizational Outcomes
-- Adoption across multiple enterprise teams
-- Established reference architecture for safe GenAI adoption
-- Accelerated enterprise-wide AI enablement
+- Reduced hallucinations by 45%
+- Reduced inference costs by 38%
+- Maintained sub-2-second latency
+
+### Engineering Impact
+
+- Built reusable enterprise RAG architecture
+- Achieved 99.9% platform availability
